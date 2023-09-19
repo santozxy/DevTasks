@@ -1,0 +1,386 @@
+$primary: #333;
+$secondary: #e40d0d;
+$terciary: #fff;
+$quaternary: #000;
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+
+/* ===============  APP CSS  ===============*/
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Poppins, sans-serif;
+  background-color: #f4f4f4;
+  color: $primary;
+  margin: auto;
+
+  h1,
+  h3 {
+    text-align: center;
+  }
+
+  .logo,
+  .logo span {
+    margin: 0;
+    display: flex;
+    font-size: 2rem;
+  }
+
+  h2 {
+    margin-bottom: .625rem;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  span {
+    font-size: 1.3rem;
+    color: $secondary;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: .5rem .325rem;
+    margin-bottom: .625rem;
+    border: 1px solid #ccc;
+    border-radius: .2rem;
+    width: 100%;
+    font-size: 1.1rem;
+    font-family: Poppins;
+  }
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  background-color: #efefefb0;
+  border-radius: .625rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  color: $terciary;
+  width: 100%;
+  padding: 1rem;
+}
+
+.filter-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+
+button {
+  background-color: $secondary;
+  color: $terciary;
+  padding: .425rem .625rem;
+  border: none;
+  border-radius: .2rem;
+  cursor: pointer;
+  opacity: .8;
+  transition: .3s;
+  margin-right: .625rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  max-width: 1600px;
+  margin: auto;
+}
+
+/* ===============  SEARCH CSS  ===============*/
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  span {
+    font-size: 3rem;
+    color: $secondary;
+  }
+
+  input {
+    padding: .5rem;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* ===============  TASK CSS  ===============*/
+
+.tasks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.task {
+  background-color: rgba(255, 255, 255, 0.664);
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+  margin-bottom: .625rem;
+  border-radius: .3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 360px;
+}
+
+.task-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: $primary;
+  padding: 0 1rem;
+  border-radius: .3rem;
+  width: 100%;
+
+  h1 {
+    font-size: 1.5rem;
+    color: $terciary;
+  }
+}
+
+.task-category {
+  font-size: 2rem;
+  color: $secondary;
+}
+
+.task-title h1 {
+  font-size: 1.5rem;
+}
+
+.task-description {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 1rem 0;
+  max-width: 320px;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.remove {
+  background-color: transparent;
+  padding: .2rem;
+  box-shadow: 0 0 8px #0005;
+  width: 100%;
+  border-radius: .3rem;
+
+  i {
+    color: $secondary;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+
+.complete {
+  border-radius: .3rem;
+  width: 100%;
+  background-color: transparent;
+  padding: .2rem;
+  box-shadow: 0 0 8px #0005;
+
+  i {
+    color: #5cb85c;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+
+
+
+@media (max-width: 900px) {
+  .table-container {
+    overflow-x: auto;
+    display: block;
+  }
+}
+
+
+/* ===============  FILTER CSS  ===============*/
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.filter-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.filter-status,
+.filter-alphabetical,
+.filter-categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 300px;
+}
+
+
+.filter-alphabetical {
+  min-width: 200px;
+}
+
+.btns-sort {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: .325rem;
+  min-width: 200px;
+}
+
+.btns-sort button {
+  padding: .425rem 1rem;
+  margin: 0 .5rem;
+}
+
+/* ===============  TASKFORM CSS  ===============*/
+
+.add-tasks {
+  background-color: #333;
+  color: $terciary;
+  padding: 1rem;
+  margin: 3rem auto 0;
+}
+
+.task-form {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    button {
+      max-width: 320px;
+      padding: .7rem;
+    }
+  }
+}
+
+option {
+  color: $terciary;
+  background-color: $primary;
+  padding: .3rem;
+}
+
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100px;
+  min-height: 100px;
+}
+
+
+/* ===============  MODAL DIALOG CSS ===============*/
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  background-color: $primary;
+  width: 320px;
+  height: 300px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: $terciary;
+  border-radius: .5rem;
+
+  p {
+    color: $secondary;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(39, 39, 39, 0.418);
+}
+
+.modal-options {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+
+
+  button {
+    width: 100%;
+  }
+
+  :last-child {
+    background-color: #5cb85c;
+  }
+}
