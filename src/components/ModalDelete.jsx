@@ -4,7 +4,6 @@ import { toast } from 'react-toastify';
 
 Modal.setAppElement('#root');
 
-// eslint-disable-next-line react/prop-types
 function ModalDelete({ setShowModal, removeTasks, id }) {
 
   function closeModal() {
