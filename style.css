@@ -1,23 +1,39 @@
+/* ====================== SCROLL BAR ====================== */
+
+::-webkit-scrollbar-track {
+  background-color: var(--secondary);
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--skin-color);
+  border-radius: 3px;
+}
 
 /* ====================== FOOTER ====================== */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    padding: 0.5rem;
-    box-shadow: 10px 0 10px #000;
-    width: 100%;
-  }
-  
-  .copyright p {
-    width: 100%;
-    color: #fff;
-    text-align: center;
-  }
-  .copyright a {
-    color: #e40d0d;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  box-shadow: 10px 0 10px #000;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.copyright p {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.copyright a {
+  color: #e40d0d;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
